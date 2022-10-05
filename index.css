@@ -1,0 +1,32 @@
+.home-main-section{
+    
+    display: flex;
+    align-items: center;
+    
+}
+
+.home-main-section > .multiple-img{
+    background-image: url(images/logo.PNG);
+    flex-grow: 1;
+    max-height: 10vh;
+    min-width: 3vw;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: bottom left;
+}
+.home-main-section{
+    background-image: url(images/egor-myznik-dmNFfVHDalI-unsplash.jpg);
+    height:100vh;
+    background-size: cover;
+    background-position: center;
+    animation:slider 20s infinite linear;
+}
+@keyframes slider{
+    0%,100%{background-image: url(images/egor-myznik-dmNFfVHDalI-unsplash.jpg);}
+    25%{background-image: url(images/bruce-kamm-rHRZ9B1nCH8-unsplash.jpg);
+    }
+    50%{background-image: url(images/caroline-hernandez-6IrPVVczD4w-unsplash.jpg);
+    }
+    75%{background-image: url(images/wan-san-yip-uWBKWeuEwAE-unsplash.jpg);
+    }
+}

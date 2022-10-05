@@ -1,0 +1,128 @@
+:root{
+    --font-color:#555;
+    --font-hover-color:#lightgrey;
+}
+.bob{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+    font-family:"Raleway", sans-serif;
+    background-color:#d1d1d1;
+}
+
+.cuntainer{
+    width:420px;
+    box-shadow: 0 15px 35px rgba(50,50,93,.1),0 5px 15px rgba(0,0,0,.07);
+    padding:2em;
+    background-color:#fff;
+    margin-top: 5em;
+    
+   
+}
+.form-group{
+    margin-bottom:1em;
+    transition:all .3s;
+}
+.form-label{
+    font-size:.75em;
+    color:var(--font-color);
+    display:block;
+    opacity:0;
+    transition: all .3s;
+    transform:translateX(-50px);
+}
+.form-control{
+    box-shadow:none;
+    border-radius:0;
+    border-color:#ccc;
+    border-style:none none solid none;
+    width:90%;
+    font-size:1.25em;
+    transition:all .6s;
+}
+.form-control::placeholder{
+    color:#aaa;
+}
+.form-control:focus{
+    box-shadow:none;
+    border-color:var(--font-hover-color);
+    outline:none;
+}
+.form-group:focus-within{
+    transform:scale(1.1,1.1);
+}
+
+.form-control:invalid:focus{
+    border-color:red;
+}
+.form-control:valid:focus{
+    border-color:orange;
+}
+
+.bton{
+    background: 0 0 #fff;
+    border:1px solid #aaa;
+    border-radius:3px;
+    color:var(--font-color);
+    font-size:1em;
+    padding:10 50px;
+    text-transform:uppercase;
+}
+.bton:hover{
+    border-color:var(--font-hover-color);
+    color:var(--font-hover-color);
+}
+textarea{
+    resize:none;
+}
+
+
+
+.focused > .form-label{
+    opacity:1;
+    transform:translateX(0px);
+
+}
+.form{
+    align-items: center;
+}
+.j{
+    color:crimson;
+}
+#status{
+    width:90%;
+    max-width:500px;
+    text-align: center;
+    padding:10px;
+    margin: 0 auto;
+    border-radius: 8px;
+}
+#status.success{
+    background-color: rgb(211,250,153);
+    animation: status 4s ease forwards;
+}
+#status.error{
+    background-color: rgb(250,129,92);
+    color: white;
+    animation: status 4s ease forwards; 
+}
+@keyframes status{
+    0%{
+        opacity: 1;
+        pointer-events: all;
+    }
+    90%{
+        opacity: 1;
+        pointer-events: all;;
+    }
+    100%{
+        opacity: 0;
+        pointer-events: all;
+    }
+}
+.stat{
+    height:25px;
+    background-color: #d1d1d1;
+    padding: 1.5em;
+}
